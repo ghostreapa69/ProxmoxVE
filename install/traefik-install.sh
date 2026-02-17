@@ -122,6 +122,7 @@ msg_ok "Created Service"
 
 msg_info "Creating site templates"
 cat <<'EOF' >/etc/traefik/template.yaml.tpl
+# Author: ghostreapa69
 http:
   routers:
     ${hostname}:
@@ -138,6 +139,7 @@ EOF
 msg_ok "Template Created"
 msg_info "Creating Helper Scripts"
 cat <<'EOF' >/usr/bin/addsite
+# Author: ghostreapa69
 #!/bin/bash
 
 function setup_site() {
@@ -158,6 +160,7 @@ function setup_site() {
 setup_site
 EOF
 cat <<'EOF' >/usr/bin/ensite
+# Author: ghostreapa69
 #!/bin/bash
 
 function ensite() {
@@ -187,6 +190,7 @@ function ensite() {
 ensite
 EOF
 cat <<'EOF' >/usr/bin/dissite
+# Author: ghostreapa69
 #!/bin/bash
 
 function dissite() {
@@ -217,6 +221,7 @@ dissite
 EOF
 
 cat <<'EOF' >/usr/bin/editsite
+# Author: ghostreapa69
 #!/bin/bash
 
 function edit_site() {
